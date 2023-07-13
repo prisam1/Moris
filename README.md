@@ -10,4 +10,4 @@ Open [http://localhost:3000] to view it in your browser.
 Repo Link - 'https://github.com/prisam1/Moris.git'
 
 
-Deployment Link - ''
+Deployment Link - 'https://transcendent-begonia-e26adf.netlify.app/'
