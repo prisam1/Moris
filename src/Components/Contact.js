@@ -10,9 +10,7 @@ const ContactPage = () => {
     backgroundColor,
     primaryColor,
     secondaryColor,
-    fontSize,
-    fontColor,
-  } = colorScheme;
+ } = colorScheme;
 
   const handleSubmit = (e) => {
     e.preventDefault();

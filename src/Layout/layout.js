@@ -5,11 +5,9 @@ import {useSelector} from 'react-redux';
 const Layout = ({ children }) => {
   const colorScheme = useSelector((state) => state.colorScheme);
 
-  const {
-    backgroundColor,
+  const {,
     primaryColor,
     secondaryColor,
-    fontSize,
     fontColor,
   } = colorScheme;
 

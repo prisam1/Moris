@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import {Route, Routes } from 'react-router-dom';
 import HomePage from './Components/Home';
 import AboutPage from './Components/About';
@@ -9,8 +8,6 @@ import Layout from './Layout/layout';
 import './App.scss'
 
 const App = () => {
-  const colorScheme = useSelector((state) => state.colorScheme);
-
   return (
     <Layout>
       <Routes>

@@ -9,7 +9,6 @@ const SettingsPage = () => {
     backgroundColor,
     primaryColor,
     secondaryColor,
-    fontSize,
     fontColor,
   } = colorScheme;
 
