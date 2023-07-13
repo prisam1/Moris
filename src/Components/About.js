@@ -23,7 +23,6 @@ const AboutPage = () => {
       About
       </header>
       <main style={{ fontSize: fontSize }}>
-        <h1></h1>
         <p className="about" style={{color: fontColor}}>Software Devloper</p>
       </main>
       </div>
