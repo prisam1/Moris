@@ -1,10 +1,10 @@
-import React from 'react';
-import {Route, Routes } from 'react-router-dom';
-import HomePage from './Components/Home';
-import AboutPage from './Components/About';
-import ContactPage from './Components/Contact';
-import SettingsPage from './Components/Setting';
-import Layout from './Layout/layout';
+import React from 'react'
+import {Route, Routes } from 'react-router-dom'
+import HomePage from './Components/Home'
+import AboutPage from './Components/About'
+import ContactPage from './Components/Contact'
+import SettingsPage from './Components/Setting'
+import Layout from './Layout/layout'
 import './App.scss'
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Layout>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,16 +1,16 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setColorScheme } from '../colorSchemeSlice';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setColorScheme } from '../colorSchemeSlice'
 
 const SettingsPage = () => {
-  const dispatch = useDispatch();
-  const colorScheme = useSelector((state) => state.colorScheme);
+  const dispatch = useDispatch()
+  const colorScheme = useSelector((state) => state.colorScheme)
   const {
     backgroundColor,
     primaryColor,
     secondaryColor,
     fontColor,
-  } = colorScheme;
+  } = colorScheme
 
 
   const handleSchemeChange = (scheme) => {
@@ -24,8 +24,8 @@ const SettingsPage = () => {
             fontSize: '16px',
             fontColor: '#000000',
           })
-        );
-        break;
+        )
+        break
       case 'scheme2':
         dispatch(
           setColorScheme({
@@ -35,19 +35,19 @@ const SettingsPage = () => {
             fontSize: '18px',
             fontColor: '#000000',
           })
-        );
-        break;
+        )
+        break
       case 'scheme3':
         dispatch(
           setColorScheme({
-            backgroundColor: '#c95b02',
+            backgroundColor: '#c95b02', 
             primaryColor: '#3c0074',
             secondaryColor: '#2196f3',
             fontSize: '14px',
             fontColor: '#000000',
           })
-        );
-        break;
+        )
+        break
       case 'scheme4':
         dispatch(
           setColorScheme({
@@ -57,8 +57,8 @@ const SettingsPage = () => {
             fontSize: '20px',
             fontColor: '#000000',
           })
-        );
-        break;
+        )
+        break
       case 'scheme5':
         dispatch(
           setColorScheme({
@@ -68,8 +68,8 @@ const SettingsPage = () => {
             fontSize: '22px',
             fontColor: '#000000',
           })
-        );
-        break;
+        )
+        break
       default:
         dispatch(
           setColorScheme({
@@ -79,10 +79,10 @@ const SettingsPage = () => {
             fontSize: '',
             fontColor: '',
           })
-        );
+        )
     }
 
-  };
+  }
 
   return (
     <div style={{
@@ -128,88 +128,9 @@ const SettingsPage = () => {
             onClick={() => handleSchemeChange('scheme5')}
           />
         </div>
-        <div className='bott'>
-        <label>
-          Background Color:
-          <input
-            type="color"
-            value={colorScheme.backgroundColor}
-            onChange={(e) =>
-              dispatch(
-                setColorScheme({
-                  ...colorScheme,
-                  backgroundColor: e.target.value,
-                })
-              )
-            }
-          />
-        </label>
-        <label>
-          Primary Color:
-          <input
-            type="color"
-            value={colorScheme.primaryColor}
-            onChange={(e) =>
-              dispatch(
-                setColorScheme({
-                  ...colorScheme,
-                  primaryColor: e.target.value,
-                })
-              )
-            }
-          />
-        </label>
-        <label>
-          Secondary Color:
-          <input
-            type="color"
-            value={colorScheme.secondaryColor}
-            onChange={(e) =>
-              dispatch(
-                setColorScheme({
-                  ...colorScheme,
-                  secondaryColor: e.target.value,
-                })
-              )
-            }
-          />
-        </label>
-        <label>
-          Font Size:
-          <input
-            type="number"
-            min="12"
-            max="24"
-            value={colorScheme.fontSize}
-            onChange={(e) =>
-              dispatch(
-                setColorScheme({
-                  ...colorScheme,
-                  fontSize: e.target.value,
-                })
-              )
-            }
-          />
-        </label>
-        <label>
-          Font Color:
-          <input
-            type="color"
-            value={colorScheme.fontColor}
-            onChange={(e) =>
-              dispatch(
-                setColorScheme({
-                  ...colorScheme,
-                  fontColor: e.target.value,
-                })
-              )
-            }
-          />
-        </label>
-        </div>
-      </div>
+          </div>
      </div>
-  );
-};
+  )
+}
 
-export default SettingsPage;
+export default SettingsPage

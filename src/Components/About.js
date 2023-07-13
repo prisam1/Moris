@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 const AboutPage = () => {
-  const colorScheme = useSelector((state) => state.colorScheme);
+  const colorScheme = useSelector((state) => state.colorScheme)
 
   const {
     backgroundColor,
@@ -10,7 +10,7 @@ const AboutPage = () => {
     secondaryColor,
     fontSize,
     fontColor,
-  } = colorScheme;
+  } = colorScheme
 
   return (
     <div
@@ -26,7 +26,7 @@ const AboutPage = () => {
         <p className="about" style={{color: fontColor}}>Software Devloper</p>
       </main>
       </div>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

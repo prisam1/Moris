@@ -1,33 +1,35 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { submitContactForm } from '../contactActions';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { submitContactForm } from '../contactActions'
 
 const ContactPage = () => {
-  const dispatch = useDispatch();
-  const colorScheme = useSelector((state) => state.colorScheme);
+  const dispatch = useDispatch()
+  const colorScheme = useSelector((state) => state.colorScheme)
 
   const {
     backgroundColor,
     primaryColor,
     secondaryColor,
- } = colorScheme;
+    fontColor,
+ } = colorScheme
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const formData = {
       name: e.target.elements.name.value,
       email: e.target.elements.email.value,
       message: e.target.elements.message.value,
-    };
-    dispatch(submitContactForm(formData));
+    }
+    dispatch(submitContactForm(formData))
   
-    e.target.reset();
-  };
+    e.target.reset()
+  }
 
   return (
     <div
       style={{
         backgroundColor: backgroundColor,
+        color:fontColor,
      }}
       className="back"
     >
@@ -45,10 +47,10 @@ const ContactPage = () => {
         <div className='inform'>
           Message : <textarea id="message" name="message" rows="5"></textarea>
         </div>
-        <button type="submit" className='but'>Submit</button>
+        <button type="submit" className='but' style={{backgroundColor: primaryColor,color:fontColor}}>Submit</button>
       </form>
       </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

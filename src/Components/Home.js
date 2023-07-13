@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 const HomePage = () => {
-  const colorScheme = useSelector((state) => state.colorScheme);
+  const colorScheme = useSelector((state) => state.colorScheme)
 
   const {
     backgroundColor,
@@ -10,7 +10,7 @@ const HomePage = () => {
     secondaryColor,
     fontSize,
     fontColor,
-  } = colorScheme;
+  } = colorScheme
 
   return (
     <div
@@ -27,7 +27,7 @@ const HomePage = () => {
         <p className="hcon" style={{color: fontColor}}>Dynamically Changes colour of web page</p>
       </main>
         </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

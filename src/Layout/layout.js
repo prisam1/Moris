@@ -1,15 +1,15 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 const Layout = ({ children }) => {
-  const colorScheme = useSelector((state) => state.colorScheme);
+  const colorScheme = useSelector((state) => state.colorScheme)
 
   const {
     primaryColor,
     secondaryColor,
     fontColor,
-  } = colorScheme;
+  } = colorScheme
 
   return (
     <div className="layout" >
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
       </footer>
       
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
