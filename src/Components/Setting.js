@@ -89,7 +89,7 @@ const SettingsPage = () => {
       backgroundColor: backgroundColor,
       color: fontColor,
     }} >
-      <header className="header2" style={{backgroundColor: secondaryColor, color:primaryColor}}>Settings</header>
+      <header className="header2" style={{backgroundColor: secondaryColor, color:primaryColor }}>Settings</header>
       <div className="backs" >
         <div className="color-scheme-buttons">
           <button
@@ -128,7 +128,44 @@ const SettingsPage = () => {
             onClick={() => handleSchemeChange('scheme5')}
           />
         </div>
-          </div>
+        <div className='bott' style={{ color: fontColor }}> 
+        <label>
+          Background Color:
+          <input type="color" value={colorScheme.backgroundColor} onChange={(e) =>
+              dispatch( setColorScheme({ ...colorScheme, backgroundColor: e.target.value }))
+            }
+          />
+        </label>
+        <label>
+          Primary Color:
+          <input type="color" value={colorScheme.primaryColor} onChange={(e) =>
+              dispatch( setColorScheme({ ...colorScheme, primaryColor: e.target.value }))
+            }
+          />
+        </label>
+        <label>
+          Secondary Color:
+          <input type="color" value={colorScheme.secondaryColor} onChange={(e) =>
+              dispatch( setColorScheme({ ...colorScheme, secondaryColor: e.target.value }))
+            }
+          />
+        </label>
+        <label>
+          Font Color:
+          <input type="color" value={colorScheme.fontColor} onChange={(e) =>
+              dispatch( setColorScheme({ ...colorScheme, fontColor: e.target.value }))
+            }
+          />
+        </label>
+        <label>
+          Font Size:
+          <input type="number" min="12" max="24" value={colorScheme.fontSize} onChange={(e) =>
+              dispatch( setColorScheme({ ...colorScheme, fontSize: e.target.value }))
+            }
+          />
+        </label>   
+      </div>
+        </div>
      </div>
   )
 }

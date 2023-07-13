@@ -8,7 +8,8 @@ const Layout = ({ children }) => {
   const {
     primaryColor,
     secondaryColor,
-    fontColor,
+    fontColor
+    
   } = colorScheme
 
   return (
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
         </ul>
       </div>
       <main className="content">{children}</main>
-      <footer className="footer" style={{ backgroundColor: secondaryColor, color: fontColor, }}>
+      <footer className="footer" style={{ backgroundColor: secondaryColor, color: fontColor}}>
        <h3>Made By</h3><p>Pritam Kumar Samaddar</p>
       </footer>
       

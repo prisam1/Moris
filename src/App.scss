@@ -48,10 +48,12 @@ $fcolor:#5201e9;
 
 }
 .we{
-  margin-left: 30rem;
   font-size: 6rem;
   font-weight: 800;
   font-family:cursive;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hcon{
@@ -110,14 +112,14 @@ $fcolor:#5201e9;
   text-align: center;
   color:$font-color;
   font-size:larger;
-  margin-top:0rem;
-  
+    
 }
 
 .bott{
   margin: 4rem; 
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between; 
 }
 
 .back{
